@@ -810,7 +810,7 @@ class TicketConfirmView(
             ),
             view=None,
         )
-        async def require_modmail_staff(
+async def require_modmail_staff(
     ctx: commands.Context,
 ) -> bool:
     if (
@@ -1435,7 +1435,7 @@ def parse_unix_timestamp(
         if match
         else None
     )
-    async def update_departure_schedule_message():
+async def update_departure_schedule_message():
     guild = bot.get_guild(GUILD_ID)
 
     if not guild:
@@ -1982,7 +1982,7 @@ async def schedule_command(
             ),
         )
     )
-    @bot.command(name="list-events")
+@bot.command(name="list-events")
 async def list_events_command(
     ctx: commands.Context,
 ):
